@@ -123,6 +123,19 @@ kat-start() {
     rails s thin -p 5000 -e $environment
 }
 
+kat-bundler-ext-on() {
+    if [ -f $KAT_SRC_HOME/Gemfile ]; then
+        mv Gemfile Gemfile.in
+    fi
+}
+
+kat-bundler-ext-off() {
+    if [ -f $KAT_SRC_HOME/Gemfile.in ]; then
+        mv Gemfile.in Gemfile
+    fi
+}
+
+
 # Alias to katello shell
 alias kat="$KAT_CLI_HOME/bin/katello -u $KAT_USER -p $KAT_PASSWORD"
 alias katello="$KAT_CLI_HOME/bin/katello"
