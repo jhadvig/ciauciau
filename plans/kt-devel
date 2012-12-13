@@ -3,9 +3,11 @@
 
 # add steps specific to this plan
 PLAN=(
+100-aliases.sh
 101-git.sh
 401-install-katello-devel.sh
 600-setup-katello-devel.sh
 601-checkout-katello.sh
+605-setup-test-db.sh
 )
 
