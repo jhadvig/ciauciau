@@ -131,7 +131,11 @@ alias katello="$KAT_CLI_HOME/bin/katello"
 export PYTHONPATH="$KAT_CLI_HOME/src"
 
 # Katello CLI tab completion in bash
-. $KAT_SRC_HOME/deploy/common/katello.completion.sh
+_katello() {
+  COMPREPLY=($($KAT_HOME/cli/bin/_complete_katello "${COMP_WORDS[*]}" | sed 's/^[^a-z\-]*\w//'))
+  return 0
+}
+
 complete -F _katello kat
 complete -F _katello katello
 
