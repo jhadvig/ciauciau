@@ -9,5 +9,6 @@ PLAN=(
 600-setup-katello-devel.sh
 601-checkout-katello.sh
 605-setup-test-db.sh
+610-checkout-api-utils.sh
 )
 
