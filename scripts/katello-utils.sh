@@ -2,7 +2,8 @@
 
 SCRIPT_DIR=$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-. $SCRIPT_DIR/katello-config.sh
+export KATELLO_CONFIG_FILE
+source "$KATELLO_CONFIG_FILE"
 
 # Start daemon for asynchronous processing
 kat-start-jobs() {

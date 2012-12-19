@@ -7,3 +7,4 @@ source ~/katello-utils/api/api.sh
 source ~/katello-utils/api/completion.sh
 EOF
 
+source ~/.bashrc

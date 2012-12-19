@@ -1,7 +1,6 @@
-cat >> /root/.bashrc <<'EOF'
+cat >> ~/.bashrc <<'EOF'
 source ~/ciauciau/scripts/colors.sh
 source ~/ciauciau/scripts/git-utils.sh
-source ~/ciauciau/scripts/katello-utils.sh
 EOF
 
-source /root/.bashrc
+source ~/.bashrc

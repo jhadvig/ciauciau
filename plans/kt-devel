@@ -8,6 +8,8 @@ PLAN=(
 401-install-katello-devel.sh
 600-setup-katello-devel.sh
 601-checkout-katello.sh
+602-setup-devel-config.sh
+603-katello-aliases.sh
 605-setup-test-db.sh
 610-checkout-api-utils.sh
 )

@@ -1,8 +1,8 @@
 
-KATELLO_SRC_DIR="/root/katello/"
+KATELLO_DIR="~/katello/"
 
-git clone git@github.com:tstrachota/katello.git "$KATELLO_SRC_DIR"
-pushd "$KATELLO_SRC_DIR"
+git clone git@github.com:tstrachota/katello.git "$KATELLO_DIR"
+pushd "$KATELLO__DIR"
 git remote add upstream git@github.com:Katello/katello.git
 git fetch upstream
 git checkout master
