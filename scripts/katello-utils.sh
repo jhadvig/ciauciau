@@ -126,13 +126,13 @@ kat-start() {
 
 kat-bundler-ext-on() {
     if [ -f $KAT_SRC_HOME/Gemfile ]; then
-        mv Gemfile Gemfile.in
+        mv $KAT_SRC_HOME/Gemfile $KAT_SRC_HOME/Gemfile.in
     fi
 }
 
 kat-bundler-ext-off() {
     if [ -f $KAT_SRC_HOME/Gemfile.in ]; then
-        mv Gemfile.in Gemfile
+        mv $KAT_SRC_HOME/Gemfile.in $KAT_SRC_HOME/Gemfile
     fi
 }
 
