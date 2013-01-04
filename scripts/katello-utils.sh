@@ -120,8 +120,28 @@ kat-start() {
     fi
 
     cd $KAT_SRC_HOME
-    export RAILS_RELATIVE_URL_ROOT=/katello
-    rails s thin -p 5000 -e $environment
+    export RAILS_RELATIVE_URL_ROOT=/$KAT_PREFIX
+    if [ "$KAT_PORT" != "" ]; then 
+        rails s thin -p $KAT_PORT -e $environment
+    else    
+        rails s thin -e $environment
+    fi
+}
+
+fm-start() {
+    if [ "$1" == "prod" ]; then
+        environment="production"
+    else
+        environment="development"
+    fi
+
+    cd $FOREMAN_SRC_HOME
+    export RAILS_RELATIVE_URL_ROOT=/$FOREMAN_PREFIX
+    if [ "$FOREMAN_PORT" != "" ]; then 
+        bundle exec rails s -p $FOREMAN_PORT -e $environment
+    else    
+        bundle exec rails s -e $environment
+    fi
 }
 
 kat-bundler-ext-on() {
