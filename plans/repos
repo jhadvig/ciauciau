@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# load template plan
+. $PLANSDIR/katello-template
+
+# add steps specific to this plan
+PLAN=(${PLAN[@]}
+300-setup-repos-katello.sh
+
+)
